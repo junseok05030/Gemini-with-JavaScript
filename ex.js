@@ -1,11 +1,11 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-const genAI = new GoogleGenerativeAI("AIzaSyBeLNwgzTDjqbIYu9-I8EFxDsOoy320n0A");
+const genAI = new GoogleGenerativeAI("API_KEY");
 
 async function run() {
   const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
-  const prompt = "소설 하나 써봐";
+  const prompt = "이세계물 컨셉을 생각해봐";
 
   const result = await model.generateContent(prompt);
   const response = await result.response;
